@@ -1,0 +1,8 @@
+Code review:
+
+Terdiri dari 1 Scenario yaitu "Login"
+
+Test pertama melakukan login dengan kredensial yang benar dan assert apakah login berhasil.
+Test kedua mencoba login dengan kredensial yang salah dan assert apakah login gagal.
+Test ketiga melanjutkan dari login yang berhasil untuk menguji fungsi dashboard dengan assert harus terdapat "Sauce Labs Backpack"
+Test keempat melanjutkan dari login yang berhasil untuk menguji fungsi dashboard dengan click Button "Add To Cart" dan Assert bahwa button terdapat button "Remove".

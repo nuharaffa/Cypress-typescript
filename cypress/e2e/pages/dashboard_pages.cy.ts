@@ -20,11 +20,15 @@ export class DashboardPage{
 
     removeItemCart(){
         // cy.contains()
-        cy.get("#remove-sauce-labs-backpack").click()
+        cy.get('[data-test="remove-sauce-labs-backpack"]').click()
     }
 
-    assertRemoveItem(){
+    assertButtonAddToCart(){
         //cy.get("#remove-sauce-labs-backpack").should('be.invisible')
-        cy.get("#add-to-cart-sauce-labs-backpack").should('be.visible')
+        cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').should('be.visible')
+    }
+
+    clickButtonCart(){
+        cy.get('.shopping_cart_link').click()
     }
 }
