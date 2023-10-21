@@ -1,5 +1,5 @@
-import {LoginPage} from "./pages/login_pages"
-import {DashboardPage} from "./pages/dashboard_pages"
+import {LoginPage} from "./pages/login_pages.cy"
+import {DashboardPage} from "./pages/dashboard_pages.cy"
 
 let loginPage = new LoginPage()
 let dashboardPage = new DashboardPage()
@@ -19,4 +19,11 @@ it('Test Sauce Demo Sauce labs product backpack', () => {
     loginPage.login(URL,'standard_user','secret_sauce')
     loginPage.assertLogin()
     dashboardPage.sauceLabsBackpack() 
+})
+
+it('Test Sauce Demo Sauce labs add item', () => {
+    loginPage.login(URL,'standard_user','secret_sauce')
+    loginPage.assertLogin()
+    dashboardPage.addItemToCart() 
+    dashboardPage.assertItemCart()
 })
